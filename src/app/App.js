@@ -6,11 +6,9 @@ import api from "./api"
 function App() {
     const [users, setUsers] = useState(api.users.fetchAll())
     const handleDelete = (userId) => setUsers(users.filter((user) => user._id !== userId))
-    // const handleToggleBookMark = (id) =>{
-    //     // dkjgofjgfgjgj
-    // }
+    const handleToggleBookMark = () =>setUsers(users.map((user)=>(user)))
     return(
-        <><SearchStatus length={users.length}/><Users users={users} onDelete={handleDelete}/></>
+        <><SearchStatus length={users.length}/><Users users={users} onDelete={handleDelete} onFavourite={handleToggleBookMark}/></>
     )
 }
 

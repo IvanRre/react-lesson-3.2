@@ -14,7 +14,7 @@ const SearchStatus = ({ length }) => {
                 'badge bg-'+(length>0?'primary':'danger')
             }
         >
-            {length>0?`${length} ${renderPhrase(length)} с тобой сегодня: `:"Никто с тобой не тусанет"}
+            {length>0?`${length} ${renderPhrase(length)} с тобой сегодня: `:"Никто с тобой не тусанет("}
         </span></h2>)
 }
 
