@@ -1,11 +1,9 @@
 import React from "react";
 
-const BookMark = ({onFavourite}) => {
-    // console.log(id)
-    // let fav = 0
-    // if(fav === 0){fav++}
-    return <i className={"bi bi-bookmark"+(fav?"-heart-fill":"")}></i>
+const BookMark = ({onFavourite, status, id}) => {
+    return  <button onClick={()=>onFavourite(id)}>
+                <i className={"bi bi-bookmark"+(status?"-heart-fill":"")}></i>
+            </button>
 }
 
 export default BookMark
-// <i class="bi bi-bookmark    -heart-fill"></i>

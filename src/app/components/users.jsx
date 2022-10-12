@@ -27,6 +27,7 @@ const Users = ({users, onDelete, onFavourite}) => {
                             rate={user.rate} 
                             qualities={user.qualities}
                             onFavourite={onFavourite}
+                            bookmark={user.bookmark}
                         />
                         <td>
                             <button className="btn btn-danger" onClick={()=>onDelete(user._id)}>

@@ -2,7 +2,7 @@ import React from "react"
 import Qualitie from "./qualitie"
 import BookMark from "./bookmark"
 
-const User = ({name, profession, qualities, completedMeetings, rate, id, onFavourite}) => {
+const User = ({name, profession, qualities, completedMeetings, rate, id, onFavourite, bookmark}) => {
     return (
         <>
         <td>{name}</td>
@@ -18,7 +18,9 @@ const User = ({name, profession, qualities, completedMeetings, rate, id, onFavou
         <td>{profession.name}</td>
         <td>{completedMeetings}</td>
         <td>{rate}</td>
-        <td><button onClick={()=>onFavourite(id)}><BookMark onFavourite={onFavourite}/></button></td>
+        <td>
+            <BookMark id={id} onFavourite={onFavourite} status={bookmark}/>
+        </td>
         </>
     )
 }
