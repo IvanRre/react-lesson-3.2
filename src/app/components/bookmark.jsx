@@ -1,8 +1,9 @@
 import React from "react";
 
 const BookMark = ({onFavourite}) => {
-    let fav = 0
-    if(onFavourite()){fav++}
+    // console.log(id)
+    // let fav = 0
+    // if(fav === 0){fav++}
     return <i className={"bi bi-bookmark"+(fav?"-heart-fill":"")}></i>
 }
 

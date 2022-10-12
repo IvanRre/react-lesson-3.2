@@ -18,7 +18,7 @@ const User = ({name, profession, qualities, completedMeetings, rate, id, onFavou
         <td>{profession.name}</td>
         <td>{completedMeetings}</td>
         <td>{rate}</td>
-        <td><button onClick={()=>onFavourite(id)}><BookMark/></button></td>
+        <td><button onClick={()=>onFavourite(id)}><BookMark onFavourite={onFavourite}/></button></td>
         </>
     )
 }
